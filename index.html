@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baie Sound | Digital Music Reality</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BAIE SOUND</div>
+    <div class="hamburger">☰</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="tagline">Where digital music is made and becomes a reality.</div>
+
+    <!-- === NEXT DROP HERO SECTION === -->
+    <section class="release-countdown">
+      <h2 id="nextDropTitle">Next Drop</h2>
+      <p class="next-title">“Always There” — coming <strong>Nov 14, 2025</strong></p>
+
+      <div class="timer">
+        <div><span id="days">00</span><small>Days</small></div>
+        <div><span id="hours">00</span><small>Hours</small></div>
+        <div><span id="minutes">00</span><small>Minutes</small></div>
+        <div><span id="seconds">00</span><small>Seconds</small></div>
+      </div>
+
+      <!-- === SPLIT DROPS SECTION === -->
+      <div class="drops-split">
+        <!-- LEFT: Latest Drops -->
+<div class="drops-column">
+  <h3>Latest Drops</h3>
+  <div class="drop-tags">
+    <a href="https://distrokid.com/hyperfollow/baiesound/forget-work-im-stayin-in-bed" class="tag live">Forget Work</a>
+    <a href="https://distrokid.com/hyperfollow/baiesound/taxed" class="tag live">Taxed</a>
+    <a href="https://distrokid.com/hyperfollow/baiesound/moms-little-best-broke-friend" class="tag live">Mom’s Little Best Broke Friend</a>
+    <a href="https://distrokid.com/hyperfollow/baiesound/if-it-aint-one-thing-its-another" class="tag live">If It Ain’t One Thing</a>
+    <a href="https://distrokid.com/hyperfollow/baiesound/the-hard-way" class="tag live">The Hard Way</a>
+  </div>
+</div>
+
+        <!-- CENTER: Button -->
+        <div class="drops-center">
+          <a href="studio.html" class="btn-pink center-btn">View All Music</a>
+        </div>
+
+        <!-- RIGHT: Coming Soon -->
+        <div class="drops-column">
+          <h3>Coming Soon</h3>
+          <div class="drop-tags coming">
+            <span class="tag">Always There</span>
+            <span class="tag">Stuck in P’Cola</span>
+            <span class="tag">Forget Work (Remix)</span>
+            <span class="tag">Up on One</span>
+            <span class="tag">Snow in Florida</span>
+            <span class="tag">Still Them Youngins</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Baie Sound — Where digital music is made and becomes a reality.
+  </footer>
+
+  <script>
+    // Auto year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Countdown timer
+    const releaseDate = new Date("November 14, 2025 00:00:00").getTime();
+    const spans = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds")
+    };
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = releaseDate - now;
+      if (distance <= 0) {
+        document.getElementById("nextDropTitle").textContent = "Now Live!";
+        document.querySelector(".next-title").innerHTML = "“Always There” is out now 🎧";
+        document.querySelector(".release-countdown").classList.remove("pulse");
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      const values = { days, hours, minutes, seconds };
+      Object.entries(values).forEach(([key, value]) => {
+        if (spans[key].textContent != value) {
+          spans[key].classList.remove("fade-in");
+          void spans[key].offsetWidth;
+          spans[key].textContent = value;
+          spans[key].classList.add("fade-in");
+        }
+      });
+
+      if (distance < 86400000)
+        document.querySelector(".release-countdown").classList.add("pulse");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Hamburger toggle
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

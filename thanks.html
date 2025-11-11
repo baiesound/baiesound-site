@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Baie Sound</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">BAIE SOUND</div>
+    <div class="hamburger">☰</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="thanks-box">
+    <h1>Thanks for reaching out!</h1>
+    <p>We appreciate you taking the time to contact Baie Sound.<br>You’ll hear back from us soon — stay tuned for new drops and updates.</p>
+    <a href="index.html">Back to Home</a>
+    <a href="studio.html" style="margin-left: 10px;">Visit the Studio</a>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Baie Sound — Where digital music is made and becomes a reality.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
