@@ -5,29 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Baie Sound</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .contact-section {
-      margin-top: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 40px 20px;
-    }
-    .contact-section h1 { font-size: 2rem; margin-bottom: 15px; text-shadow: 0 0 12px rgba(255, 0, 68, 0.7); }
-    .contact-section p { max-width: 600px; color: #ccc; margin-bottom: 40px; line-height: 1.6; }
-    form { width: 100%; max-width: 500px; background: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 15px; backdrop-filter: blur(8px); box-shadow: 0 0 20px rgba(255, 0, 68, 0.3); text-align: left; }
-    label { display: block; margin-bottom: 6px; font-size: 0.9rem; color: #f0f0f0; text-shadow: 0 0 5px rgba(255, 0, 68, 0.4); }
-    input, textarea { width: 100%; padding: 10px 12px; margin-bottom: 18px; border: none; border-radius: 8px; background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 1rem; outline: none; transition: background 0.3s, box-shadow 0.3s; }
-    input:focus, textarea:focus { background: rgba(255, 255, 255, 0.2); box-shadow: 0 0 10px rgba(255, 0, 68, 0.5); }
-    textarea { resize: vertical; min-height: 100px; }
-    button { display: block; width: 100%; padding: 12px; background: linear-gradient(90deg, #ff0044, #b3003b); border: none; border-radius: 8px; color: #fff; font-size: 1rem; font-weight: bold; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
-    button:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(255, 0, 68, 0.8); }
-    @media (max-width: 600px) { form { padding: 20px; } }
-  </style>
 </head>
+
 <body>
+  <div class="bg-aura"></div>
+
   <header>
     <div class="logo">BAIE SOUND</div>
     <div class="hamburger">☰</div>
@@ -38,29 +20,46 @@
     </nav>
   </header>
 
-  <section class="contact-section">
-    <h1>Get in Touch</h1>
-    <p>Have questions, ideas, or want to collaborate with Baie Sound?<br>Drop your info below and we’ll reach out as soon as we can.</p>
+  <section class="hero">
+    <h1>Contact Baie Sound</h1>
+    <p>Have a project, question, or collaboration idea? Reach out below — let's make something unforgettable.</p>
 
-    <form action="https://formspree.io/f/your-email-here" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required />
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
-      <button type="submit">Send Message</button>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="panel">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
   <footer>
-    © <span id="year"></span> Baie Sound — Where digital music is made and becomes a reality.
+    © <span id="year"></span> Baie Sound — Digital Pulse. Real Soul.
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     document.querySelector('.hamburger').addEventListener('click', () => {
       document.querySelector('nav').classList.toggle('active');
+    });
+
+    // Aura + fade
+    document.querySelectorAll('a[href]').forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener('click', e => {
+          if (link.href !== window.location.href && !link.target && !link.hasAttribute('download')) {
+            e.preventDefault();
+            const flash = document.createElement('div');
+            flash.className = 'aura-flash';
+            document.body.appendChild(flash);
+            document.body.style.opacity = '0';
+            setTimeout(() => (window.location = link.href), 450);
+          }
+        });
+      }
+    });
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
     });
   </script>
 </body>

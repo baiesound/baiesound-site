@@ -1,189 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baie Sound Studio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Baie Sound — Studio</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header>
-  <div class="logo">BAIE SOUND</div>
-  <div class="hamburger">☰</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="studio.html" class="active">Studio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<body class="bg-aura">
+  <div class="container">
 
-<main>
-  <!-- === NEXT DROP COUNTDOWN SECTION === -->
-  <section class="release-countdown">
-    <h2 id="nextDropTitle">Next Drop</h2>
-    <p class="next-title">“Always There” — coming <strong>Nov 14, 2025</strong></p>
+    <header class="header">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>Baie Sound Studio</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="studio.html">Studio</a>
+      </nav>
+    </header>
 
-    <div class="timer">
-      <div><span id="days">00</span><small>Days</small></div>
-      <div><span id="hours">00</span><small>Hours</small></div>
-      <div><span id="minutes">00</span><small>Minutes</small></div>
-      <div><span id="seconds">00</span><small>Seconds</small></div>
-    </div>
-
-    <div class="drops-split">
-      <!-- LEFT: Latest Drops -->
-      <div class="drops-column">
-        <h3>Latest Drops</h3>
-        <div class="drop-tags">
-          <a href="https://distrokid.com/hyperfollow/baiesound/forget-work-im-stayin-in-bed" class="tag live">Forget Work</a>
-          <a href="https://distrokid.com/hyperfollow/baiesound/taxed" class="tag live">Taxed</a>
-          <a href="https://distrokid.com/hyperfollow/baiesound/moms-little-best-broke-friend" class="tag live">Mom’s Little Best Broke Friend</a>
-          <a href="https://distrokid.com/hyperfollow/baiesound/if-it-aint-one-thing-its-another" class="tag live">If It Ain’t One Thing</a>
-          <a href="https://distrokid.com/hyperfollow/baiesound/the-hard-way" class="tag live">The Hard Way</a>
+    <section class="split">
+      <!-- Player / Now Playing -->
+      <div class="panel player">
+        <div class="row"><span class="badge">Now Playing</span></div>
+        <div class="now">
+          <div class="art"></div>
+          <div>
+            <h2 style="margin-bottom:6px">Forget Work</h2>
+            <p class="muted" style="margin:0">Baie Sound • 142 BPM • D minor</p>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="k">⏮</button>
+          <button class="k">▶</button>
+          <button class="k">⏭</button>
+        </div>
+        <div class="range"></div>
+        <div class="row">
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Listen on Spotify</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Apple Music</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">Hyperfollow</a>
         </div>
       </div>
 
-      <!-- CENTER BUTTON -->
-      <div class="drops-center">
-        <a href="#releases" class="btn-pink center-btn">View All Music</a>
-      </div>
-
-      <!-- RIGHT: Coming Soon -->
-      <div class="drops-column">
-        <h3>Coming Soon</h3>
-        <div class="drop-tags coming">
-          <span class="tag">Always There</span>
-          <span class="tag">Stuck in P’Cola</span>
-          <span class="tag">Forget Work (Remix)</span>
-          <span class="tag">Up on One</span>
-          <span class="tag">Snow in Florida</span>
-          <span class="tag">Still Them Youngins</span>
+      <!-- Visual grid -->
+      <div class="panel" style="padding:22px">
+        <div class="row" style="margin-bottom:12px">
+          <span class="badge">Catalog</span>
+          <span class="badge dim" id="studioCount">• 0 items</span>
+        </div>
+        <div class="grid" id="grid">
+          <!-- Tiles = albums/singles -->
+          <div class="tile"><span><b>Forget Work</b></span></div>
+          <div class="tile"><span><b>Up On One</b></span></div>
+          <div class="tile"><span><b>Stuck in P-Cola</b></span></div>
+          <div class="tile"><span><b>Snow in Florida</b></span></div>
+          <div class="tile"><span><b>Still Them Younginz</b></span></div>
+          <div class="tile"><span><b>All Gas No Brakes</b></span></div>
+          <div class="tile"><span><b>Summer Scooter Song</b></span></div>
+          <div class="tile"><span><b>Deep Pockets</b></span></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <h1>Inside the Studio</h1>
-  <p class="subtitle">Where digital sound turns into art. Explore sessions, drops, and unreleased works in motion.</p>
+    <footer class="footer">© <span id="y"></span> Baie Sound. Built for speed & vibe.</footer>
+  </div>
 
-  <!-- OUT NOW SECTION -->
-  <section id="releases" class="releases">
-    <h2 class="section-title">Out Now</h2>
-    <div class="grid">
-      <a href="https://distrokid.com/hyperfollow/baiesound/forget-work-im-stayin-in-bed" class="card live">
-        <img src="assets/forgetwork.png" alt="Forget Work">
-        <h3>Forget Work (I’m Stayin’ in Bed)</h3>
-      </a>
-
-      <a href="https://distrokid.com/hyperfollow/baiesound/taxed" class="card live">
-        <img src="assets/taxed.png" alt="Taxed">
-        <h3>Taxed</h3>
-      </a>
-
-      <a href="https://distrokid.com/hyperfollow/baiesound/moms-little-best-broke-friend" class="card live">
-        <img src="assets/momslittlebestbrokefriend.png" alt="Mom’s Little Best Broke Friend">
-        <h3>Mom’s Little Best Broke Friend</h3>
-      </a>
-
-      <a href="https://distrokid.com/hyperfollow/baiesound/if-it-aint-one-thing-its-another" class="card live">
-        <img src="assets/ifitainteonething.png" alt="If It Ain’t One Thing, It’s Another">
-        <h3>If It Ain’t One Thing, It’s Another</h3>
-      </a>
-
-      <a href="https://distrokid.com/hyperfollow/baiesound/the-hard-way" class="card live">
-        <img src="assets/thehardway.png" alt="The Hard Way">
-        <h3>The Hard Way</h3>
-      </a>
-    </div>
-  </section>
-
-  <!-- COMING SOON SECTION -->
-  <section class="releases">
-    <h2 class="section-title">Coming Soon — Nov 14, 2025</h2>
-    <div class="grid">
-      <div class="card coming">
-        <img src="assets/alwaysthere.png" alt="Always There">
-        <h3>Always There</h3>
-      </div>
-      <div class="card coming">
-        <img src="assets/stuckinpcola.png" alt="Stuck in P’Cola">
-        <h3>Stuck in P’Cola</h3>
-      </div>
-      <div class="card coming">
-        <img src="assets/forgetworkremix.png" alt="Forget Work (Remix)">
-        <h3>Forget Work (Remix)</h3>
-      </div>
-      <div class="card coming">
-        <img src="assets/uponone.png" alt="Up on One">
-        <h3>Up on One</h3>
-      </div>
-      <div class="card coming">
-        <img src="assets/snowinflorida.png" alt="Snow in Florida">
-        <h3>Snow in Florida</h3>
-      </div>
-      <div class="card coming">
-        <img src="assets/stillthemyoungins.png" alt="Still Them Youngins">
-        <h3>Still Them Youngins</h3>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © <span id="year"></span> Baie Sound — Where digital music is made and becomes a reality.
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // === COUNTDOWN TIMER ===
-  const releaseDate = new Date("November 14, 2025 00:00:00").getTime();
-  const spans = {
-    days: document.getElementById("days"),
-    hours: document.getElementById("hours"),
-    minutes: document.getElementById("minutes"),
-    seconds: document.getElementById("seconds")
-  };
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = releaseDate - now;
-
-    if (distance <= 0) {
-      document.getElementById("nextDropTitle").textContent = "Now Live!";
-      document.querySelector(".next-title").innerHTML = "“Always There” is out now 🎧";
-      document.querySelector(".release-countdown").classList.remove("pulse");
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    const values = { days, hours, minutes, seconds };
-
-    Object.entries(values).forEach(([key, value]) => {
-      if (spans[key].textContent != value) {
-        spans[key].classList.remove("fade-in");
-        void spans[key].offsetWidth;
-        spans[key].textContent = value;
-        spans[key].classList.add("fade-in");
-      }
-    });
-
-    // Pulse within 24 hours
-    if (distance < 86400000)
-      document.querySelector(".release-countdown").classList.add("pulse");
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // Mobile nav toggle
-  document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('nav').classList.toggle('active');
-  });
-</script>
+  <script src="site.js"></script>
 </body>
 </html>

@@ -1,125 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baie Sound | Digital Music Reality</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Baie Sound — Home</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="logo">BAIE SOUND</div>
-    <div class="hamburger">☰</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="studio.html">Studio</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<body class="bg-aura">
+  <div class="container">
 
-  <main>
-    <div class="tagline">Where digital music is made and becomes a reality.</div>
+    <header class="header">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>Baie Sound</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="studio.html">Studio</a>
+        <a href="#music">Music</a>
+      </nav>
+    </header>
 
-    <!-- === NEXT DROP HERO SECTION === -->
-    <section class="release-countdown">
-      <h2 id="nextDropTitle">Next Drop</h2>
-      <p class="next-title">“Always There” — coming <strong>Nov 14, 2025</strong></p>
-
-      <div class="timer">
-        <div><span id="days">00</span><small>Days</small></div>
-        <div><span id="hours">00</span><small>Hours</small></div>
-        <div><span id="minutes">00</span><small>Minutes</small></div>
-        <div><span id="seconds">00</span><small>Seconds</small></div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="panel" style="padding:28px">
+        <div class="row">
+          <span class="badge">🔊 High-Tech Music Studio</span>
+          <span class="badge dim" id="trackCounter">• 0 tracks live</span>
+        </div>
+        <h2 style="margin:14px 0 10px">Cinematic sound. Dark-glass design. Pure energy.</h2>
+        <p class="muted">Welcome to Baie Sound — a modern studio space building beats, anthems, and motion-driven stories.</p>
+        <div class="row" style="margin-top:18px">
+          <a class="btn" href="studio.html">Enter Studio</a>
+          <a class="btn ghost" href="#music">View Music</a>
+        </div>
       </div>
 
-      <!-- === SPLIT DROPS SECTION === -->
-      <div class="drops-split">
-        <!-- LEFT: Latest Drops -->
-<div class="drops-column">
-  <h3>Latest Drops</h3>
-  <div class="drop-tags">
-    <a href="https://distrokid.com/hyperfollow/baiesound/forget-work-im-stayin-in-bed" class="tag live">Forget Work</a>
-    <a href="https://distrokid.com/hyperfollow/baiesound/taxed" class="tag live">Taxed</a>
-    <a href="https://distrokid.com/hyperfollow/baiesound/moms-little-best-broke-friend" class="tag live">Mom’s Little Best Broke Friend</a>
-    <a href="https://distrokid.com/hyperfollow/baiesound/if-it-aint-one-thing-its-another" class="tag live">If It Ain’t One Thing</a>
-    <a href="https://distrokid.com/hyperfollow/baiesound/the-hard-way" class="tag live">The Hard Way</a>
-  </div>
-</div>
+      <div class="panel" style="padding:0; overflow:hidden">
+        <!-- decorative glass preview -->
+        <div style="height:100%; aspect-ratio:16/10; background:
+             radial-gradient(60% 100% at 30% 10%, rgba(34,193,255,.28), transparent 60%),
+             radial-gradient(60% 100% at 80% 80%, rgba(181,74,255,.24), transparent 60%),
+             linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+             border-radius:inherit"></div>
+      </div>
+    </section>
 
-        <!-- CENTER: Button -->
-        <div class="drops-center">
-          <a href="studio.html" class="btn-pink center-btn">View All Music</a>
+    <!-- MUSIC LISTS -->
+    <section id="music" class="cards">
+      <div class="panel card">
+        <h3>Latest Drops</h3>
+        <div class="list" id="latestList">
+          <!-- Repeat items as needed -->
+          <a class="item" href="#" target="_blank" rel="noopener">
+            <span class="cover"></span>
+            <div class="meta">
+              <b>Forget Work</b>
+              <small>Out now • Clean / Explicit</small>
+            </div>
+          </a>
+          <a class="item" href="#" target="_blank" rel="noopener">
+            <span class="cover"></span>
+            <div class="meta">
+              <b>Up On One</b>
+              <small>Single • Moto-trap energy</small>
+            </div>
+          </a>
+          <a class="item" href="#" target="_blank" rel="noopener">
+            <span class="cover"></span>
+            <div class="meta">
+              <b>Stuck in P-Cola</b>
+              <small>Story mode • 808 + ambience</small>
+            </div>
+          </a>
         </div>
+      </div>
 
-        <!-- RIGHT: Coming Soon -->
-        <div class="drops-column">
-          <h3>Coming Soon</h3>
-          <div class="drop-tags coming">
-            <span class="tag">Always There</span>
-            <span class="tag">Stuck in P’Cola</span>
-            <span class="tag">Forget Work (Remix)</span>
-            <span class="tag">Up on One</span>
-            <span class="tag">Snow in Florida</span>
-            <span class="tag">Still Them Youngins</span>
+      <div class="panel card">
+        <h3>Coming Soon</h3>
+        <div class="list" id="comingList">
+          <div class="item">
+            <span class="cover"></span>
+            <div class="meta">
+              <b>Snow in Florida</b>
+              <small>Nov 14 • cinematic / hopeful</small>
+            </div>
+          </div>
+          <div class="item">
+            <span class="cover"></span>
+            <div class="meta">
+              <b>Still Them Younginz</b>
+              <small>reunion anthem • 138 BPM</small>
+            </div>
+          </div>
+          <div class="item">
+            <span class="cover"></span>
+            <div class="meta">
+              <b>All Gas No Brakes</b>
+              <small>high-octane trap rock</small>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer>
-    © <span id="year"></span> Baie Sound — Where digital music is made and becomes a reality.
-  </footer>
+    <footer class="footer">© <span id="y"></span> Baie Sound. All rights reserved.</footer>
+  </div>
 
-  <script>
-    // Auto year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Countdown timer
-    const releaseDate = new Date("November 14, 2025 00:00:00").getTime();
-    const spans = {
-      days: document.getElementById("days"),
-      hours: document.getElementById("hours"),
-      minutes: document.getElementById("minutes"),
-      seconds: document.getElementById("seconds")
-    };
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = releaseDate - now;
-      if (distance <= 0) {
-        document.getElementById("nextDropTitle").textContent = "Now Live!";
-        document.querySelector(".next-title").innerHTML = "“Always There” is out now 🎧";
-        document.querySelector(".release-countdown").classList.remove("pulse");
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      const values = { days, hours, minutes, seconds };
-      Object.entries(values).forEach(([key, value]) => {
-        if (spans[key].textContent != value) {
-          spans[key].classList.remove("fade-in");
-          void spans[key].offsetWidth;
-          spans[key].textContent = value;
-          spans[key].classList.add("fade-in");
-        }
-      });
-
-      if (distance < 86400000)
-        document.querySelector(".release-countdown").classList.add("pulse");
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    // Hamburger toggle
-    document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('nav').classList.toggle('active');
-    });
-  </script>
+  <script src="site.js"></script>
 </body>
 </html>
