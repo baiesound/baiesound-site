@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Baie Sound — Home</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,17 +19,16 @@
         <h1>Baie Sound</h1>
       </div>
       <nav class="nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="studio.html">Studio</a>
-        <a href="#music">Music</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="panel" style="padding:28px">
         <div class="row">
-          <span class="badge">🔊 High-Tech Music Studio</span>
+          <span class="badge">High-Tech Music Studio</span>
           <span class="badge dim" id="trackCounter">• 0 tracks live</span>
         </div>
         <h2 style="margin:14px 0 10px">Cinematic sound. Dark-glass design. Pure energy.</h2>
@@ -40,7 +40,6 @@
       </div>
 
       <div class="panel" style="padding:0; overflow:hidden">
-        <!-- decorative glass preview -->
         <div style="height:100%; aspect-ratio:16/10; background:
              radial-gradient(60% 100% at 30% 10%, rgba(34,193,255,.28), transparent 60%),
              radial-gradient(60% 100% at 80% 80%, rgba(181,74,255,.24), transparent 60%),
@@ -49,61 +48,15 @@
       </div>
     </section>
 
-    <!-- MUSIC LISTS -->
     <section id="music" class="cards">
       <div class="panel card">
         <h3>Latest Drops</h3>
-        <div class="list" id="latestList">
-          <!-- Repeat items as needed -->
-          <a class="item" href="#" target="_blank" rel="noopener">
-            <span class="cover"></span>
-            <div class="meta">
-              <b>Forget Work</b>
-              <small>Out now • Clean / Explicit</small>
-            </div>
-          </a>
-          <a class="item" href="#" target="_blank" rel="noopener">
-            <span class="cover"></span>
-            <div class="meta">
-              <b>Up On One</b>
-              <small>Single • Moto-trap energy</small>
-            </div>
-          </a>
-          <a class="item" href="#" target="_blank" rel="noopener">
-            <span class="cover"></span>
-            <div class="meta">
-              <b>Stuck in P-Cola</b>
-              <small>Story mode • 808 + ambience</small>
-            </div>
-          </a>
-        </div>
+        <div class="list" id="latestList"></div>
       </div>
 
       <div class="panel card">
         <h3>Coming Soon</h3>
-        <div class="list" id="comingList">
-          <div class="item">
-            <span class="cover"></span>
-            <div class="meta">
-              <b>Snow in Florida</b>
-              <small>Nov 14 • cinematic / hopeful</small>
-            </div>
-          </div>
-          <div class="item">
-            <span class="cover"></span>
-            <div class="meta">
-              <b>Still Them Younginz</b>
-              <small>reunion anthem • 138 BPM</small>
-            </div>
-          </div>
-          <div class="item">
-            <span class="cover"></span>
-            <div class="meta">
-              <b>All Gas No Brakes</b>
-              <small>high-octane trap rock</small>
-            </div>
-          </div>
-        </div>
+        <div class="list" id="comingList"></div>
       </div>
     </section>
 
