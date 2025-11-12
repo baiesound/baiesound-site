@@ -18,55 +18,40 @@
     "status": "latest",
     "desc": "Single • Playful Hip-Hop Story",
     "release": "Out Now",
-    "cover": "assets/momslittle.png"
+    "cover": "assets/momslittlebestbrokefriend.png"
   },
   {
     "title": "If It Ain’t One Thing, It’s Another",
     "status": "latest",
     "desc": "Single • Reflective Mood Trap",
     "release": "Out Now",
-    "cover": "assets/oneThing.png"
+    "cover": "assets/ifitaintonething.png"
   },
   {
     "title": "The Hard Way",
     "status": "latest",
     "desc": "Single • Emotional / Motivational",
     "release": "Out Now",
-    "cover": "assets/theHardWay.png"
+    "cover": "assets/thehardway.png"
   },
   {
     "title": "Snow in Florida",
     "status": "coming",
     "desc": "Cinematic / Hopeful Storytelling",
     "release": "Nov 14, 2025",
-    "cover": "assets/snowInFlorida.png"
+    "cover": "assets/snowinflorida.png"
   },
   {
     "title": "Still Them Younginz",
     "status": "coming",
     "desc": "Reunion Anthem • 138 BPM",
     "release": "TBA",
-    "cover": "assets/younginz.png"
+    "cover": "assets/stillthemyoungins.png"
   },
-  {
-    "title": "All Gas No Brakes",
+{
+    "title": "Always There",
     "status": "coming",
-    "desc": "High-Octane Trap Rock",
-    "release": "TBA",
-    "cover": "assets/allgas.png"
-  },
-  {
-    "title": "Summer Scooter Song",
-    "status": "coming",
-    "desc": "Uplifting / Family Fun Vibe",
-    "release": "TBA",
-    "cover": "assets/scooter.png"
-  },
-  {
-    "title": "Deep Pockets",
-    "status": "coming",
-    "desc": "Low-End Groove / Hustle Talk",
-    "release": "TBA",
-    "cover": "assets/deepPockets.png"
-  }
+    "desc": "Heartfelt, Appreciative",
+    "release": "Nov 14, 2025",
+    "cover": "assets/alwaysthere.png"
 ]
