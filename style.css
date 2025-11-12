@@ -147,6 +147,47 @@ body.bg-aura {
 .btn.ghost:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+.stream-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn.platform {
+  flex: 1 1 45%;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  padding: 12px 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn.platform i {
+  font-size: 1.2rem;
+}
+
+/* Brand color accents */
+.btn.platform.spotify {
+  background: linear-gradient(135deg, #1DB954, #14833b);
+}
+.btn.platform.apple {
+  background: linear-gradient(135deg, #555, #111);
+}
+.btn.platform.youtube {
+  background: linear-gradient(135deg, #FF0000, #B00000);
+}
+.btn.platform.amazon {
+  background: linear-gradient(135deg, #FF9900, #b36b00);
+}
+
+/* Hover glow */
+.btn.platform:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
 
 /* Responsive mobile layout */
 @media (max-width: 900px) {
