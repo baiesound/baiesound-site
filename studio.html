@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baie Sound — Studio</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/lists/font-awesome/6.5.1/css/all.min.css">
+  <!-- Correct Font Awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-aura">
   <div class="container">
 
+    <!-- HEADER -->
     <header class="header">
       <div class="brand">
         <span class="dot"></span>
@@ -18,122 +20,101 @@
       </div>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="studio.html">Studio</a>
+        <a href="studio.html" class="active">Studio</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
+    <!-- MAIN SPLIT SECTION -->
     <section class="split">
-      <!-- REAL SPOTIFY PLAYER (YOUR 100% CORRECT TRACK) -->
-      <section class="split">
-  <!-- NOW PLAYING PANEL -->
-  <div class="panel player">
-    <div class="row"><span class="badge">Now Playing</span></div>
 
-    <div style="margin:20px 0;">
-      <!-- Single Track Embed -->
-      <iframe 
-        style="border-radius:16px; box-shadow:0 0 30px rgba(0,0,0,0.35);"
-        src="https://open.spotify.com/embed/track/3s7rV8u3t4X5fO0iK2u5mQ?utm_source=generator&theme=0"
-        width="100%"
-        height="152"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </div>
+      <!-- NOW PLAYING PANEL -->
+      <div class="panel player">
+        <div class="row"><span class="badge">Now Playing</span></div>
 
-    <div class="now" style="margin-top:12px;">
-      <div class="art"></div>
-      <div>
-        <h2 style="margin-bottom:6px">Forget Work (I'm Stayin’ in Bed)</h2>
-        <p class="muted" style="margin:0">Baie Sound • 142 BPM • D minor</p>
-      </div>
-    </div>
+        <div style="margin:20px 0;">
+          <iframe 
+            style="border-radius:16px; box-shadow:0 0 30px rgba(0,0,0,0.35);"
+            src="https://open.spotify.com/embed/track/3s7rV8u3t4X5fO0iK2u5mQ?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
 
-    <div class="row" style="gap:14px; justify-content:center; margin-top:24px;">
-      <a href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" target="_blank" rel="noopener"
-         class="flex items-center justify-center h-12 px-8 rounded-full bg-black/80 border border-green-500/50 hover:border-green-400 transition shadow-lg">
-        <i class="fab fa-spotify text-2xl mr-2" style="color:#1DB954;"></i>
-        <span class="text-white font-bold">Spotify</span>
-      </a>
+        <div class="now" style="margin-top:12px;">
+          <div class="art"></div>
+          <div>
+            <h2 style="margin-bottom:6px">Forget Work (I'm Stayin’ in Bed)</h2>
+            <p class="muted" style="margin:0">Baie Sound • 142 BPM • D minor</p>
+          </div>
+        </div>
 
-      <a href="https://music.apple.com/us/artist/baie-sound/1849097748" target="_blank" rel="noopener"
-         class="flex items-center justify-center h-12 px-8 rounded-full bg-gradient-to-r from-pink-600 to-red-600 hover:from-pink-500 hover:to-red-500 transition shadow-lg">
-        <i class="fab fa-apple text-3xl mr-2"></i>
-        <span class="text-white font-bold">Apple</span>
-      </a>
-
-      <a href="https://hyperfollow.com/baiesound" target="_blank" rel="noopener" class="btn">Hyperfollow</a>
-    </div>
-  </div>
-
-  <!-- ARTIST PANEL -->
-  <div class="panel" style="padding:32px 28px;">
-    <div class="row" style="margin-bottom:16px; justify-content:space-between;">
-      <span class="badge">Artist Feed</span>
-      <span class="badge dim">• Auto-updates</span>
-    </div>
-
-    <!-- Full Artist Embed -->
-    <iframe
-      style="border-radius:16px; box-shadow:0 0 30px rgba(0,0,0,0.35);"
-      src="https://open.spotify.com/embed/artist/6eIOPPkir1qsVhAPHO6S98?utm_source=generator&theme=0"
-      width="100%"
-      height="352"
-      frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
-
-        <!-- REAL LOGO BUTTONS -->
+        <!-- LOGO BUTTONS -->
         <div class="row" style="gap:14px; justify-content:center; margin-top:24px;">
           <a href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" target="_blank" rel="noopener"
              class="flex items-center justify-center h-12 px-8 rounded-full bg-black/80 border border-green-500/50 hover:border-green-400 transition shadow-lg">
-            <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="#1DB954">
-              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.538-1.047.538-.371 0-.742-.18-1.037-.538-.482-.66-.66-1.363-.66-2.066 0-.719.198-1.422.66-2.066.295-.358.666-.538 1.037-.538.387 0 .807.179 1.047.538.482.66.66 1.363.66 2.066 0 .703-.178 1.406-.66 2.066zm1.662-3.998c-.299.438-.82.657-1.3.657-.465 0-.93-.225-1.3-.657-.598-.82-.82-1.696-.82-2.584 0-.888.222-1.763.82-2.584.37-.432.835-.657 1.3-.657.48 0 1.001.225 1.3.657.598.82.82 1.696.82 2.584 0 .888-.222 1.764-.82 2.584zm1.741-4.373c-.368.538-1.012.806-1.605.806-.592 0-1.184-.268-1.605-.806-.724-.993-1.012-2.048-1.012-3.12 0-1.072.288-2.127 1.012-3.12.421-.538 1.013-.806 1.605-.806.593 0 1.237.268 1.605.806.724.993 1.012 2.048 1.012 3.12 0 1.072-.288 2.127-1.012 3.12z"/>
-            </svg>
+            <i class="fab fa-spotify text-2xl mr-2" style="color:#1DB954;"></i>
             <span class="text-white font-bold">Spotify</span>
           </a>
 
           <a href="https://music.apple.com/us/artist/baie-sound/1849097748" target="_blank" rel="noopener"
              class="flex items-center justify-center h-12 px-8 rounded-full bg-gradient-to-r from-pink-600 to-red-600 hover:from-pink-500 hover:to-red-500 transition shadow-lg">
-            <i class="fab fa-apple text-3xl mr-2"></i>
+            <i class="fab fa-apple text-3xl mr-2" style="color:#fff;"></i>
             <span class="text-white font-bold">Apple</span>
           </a>
 
-          <a href="https://hyperfollow.com/baiesound" target="_blank" rel="noopener"
-             class="btn">Hyperfollow</a>
+          <a href="https://hyperfollow.com/baiesound" target="_blank" rel="noopener" class="btn">Hyperfollow</a>
         </div>
       </div>
 
-      <!-- CATALOG – CLICKABLE FULL-PAGE LINK (MOCKUP PERFECT) -->
-      <div class="panel" style="padding:32px 28px; cursor:pointer; transition:transform .2s;"
-           onclick="window.open('https://hyperfollow.com/baiesound','_blank')">
+      <!-- ARTIST FEED PANEL -->
+      <div class="panel" style="padding:32px 28px;">
         <div class="row" style="margin-bottom:16px; justify-content:space-between;">
-          <span class="badge">Catalog</span>
-          <span class="badge dim">• 9 releases • Auto-updates</span>
+          <span class="badge">Artist Feed</span>
+          <span class="badge dim">• Auto-updates</span>
         </div>
 
-        <div style="background:linear-gradient(135deg, rgba(34,193,255,.22), rgba(181,74,255,.18));
-                    border-radius:20px; padding:40px 32px; text-align:center;
-                    height:380px; display:flex; flex-direction:column; justify-content:center;
-                    backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.08);">
-          <p style="font-size:20px; margin:0 0 12px; line-height:1.3;">
-            View full catalog &amp;<br>stream on all platforms
-          </p>
-          <p style="font-size:13px; color:#aab3c2; margin:0;">
-            Powered by DistroKid • New drops added instantly
-          </p>
+        <!-- Full Artist Embed -->
+        <iframe
+          style="border-radius:16px; box-shadow:0 0 30px rgba(0,0,0,0.35);"
+          src="https://open.spotify.com/embed/artist/6eIOPPkir1qsVhAPHO6S98?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+
+        <!-- Catalog Call-to-Action -->
+        <div style="margin-top:24px; cursor:pointer;" onclick="window.open('https://hyperfollow.com/baiesound','_blank')">
+          <div class="row" style="margin-bottom:16px; justify-content:space-between;">
+            <span class="badge">Catalog</span>
+            <span class="badge dim">• 9 releases • Auto-updates</span>
+          </div>
+          <div style="background:linear-gradient(135deg, rgba(34,193,255,.22), rgba(181,74,255,.18));
+                      border-radius:20px; padding:40px 32px; text-align:center;
+                      height:260px; display:flex; flex-direction:column; justify-content:center;
+                      backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.08);">
+            <p style="font-size:20px; margin:0 0 12px; line-height:1.3;">
+              View full catalog &amp;<br>stream on all platforms
+            </p>
+            <p style="font-size:13px; color:#aab3c2; margin:0;">
+              Powered by DistroKid • New drops added instantly
+            </p>
+          </div>
         </div>
       </div>
+
     </section>
 
     <footer class="footer">© <span id="y"></span> Baie Sound. Built for speed & vibe.</footer>
   </div>
 
-  <script src="site.js"></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
