@@ -52,9 +52,11 @@ body.bg-aura {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 28px;
+  align-items: stretch; /* keeps both panels the same height */
   margin-bottom: 40px;
 }
+
 
 .hero .panel {
   background: rgba(15, 15, 20, 0.75);
