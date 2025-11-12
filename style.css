@@ -1,4 +1,4 @@
- /* === BASE === */
+/* === BASE === */
 * { box-sizing: border-box; }
 
 /* === GLOBAL BACKGROUND === */
@@ -78,10 +78,9 @@ body.bg-aura {
 
 @media (max-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1fr; /* Stack on mobile */
+    grid-template-columns: 1fr;
   }
 }
-
 
 /* === STICKY HEADER === */
 .header {
@@ -206,7 +205,7 @@ a:hover {
   text-shadow:0 0 10px rgba(63,169,255,0.8);
 }
 
-/* === HERO PANEL REFINEMENT === */
+/* === HERO PANEL === */
 .hero.panel {
   text-align: center;
   padding: 70px 40px;
@@ -271,9 +270,73 @@ a:hover {
 }
 
 @media (max-width: 600px) {
-  .stream-buttons img {
-    height: 30px;
-  }
+  .stream-buttons img { height: 30px; }
+}
+
+/* === PANEL ALIGNMENT FIX === */
+.hero-grid .panel {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: auto;
+}
+
+/* === COMING SOON LIST === */
+#comingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#comingList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(63,169,255,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: all 0.25s ease;
+}
+
+#comingList li:hover {
+  background: rgba(63,169,255,0.15);
+  border-color: rgba(63,169,255,0.3);
+  box-shadow: 0 0 15px rgba(63,169,255,0.25);
+}
+
+/* Compact artwork thumbnails */
+#comingList img.song-art {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(63,169,255,0.25);
+  box-shadow: 0 0 10px rgba(63,169,255,0.25);
+  transition: transform 0.3s ease;
+}
+
+#comingList img.song-art:hover {
+  transform: scale(1.05);
+}
+
+#comingList span {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #eaeaea;
+  line-height: 1.4;
+}
+
+#comingList strong {
+  color: #3fa9ff;
+  font-weight: 600;
 }
 
 /* === FADE-IN ANIMATION === */
@@ -285,65 +348,4 @@ a:hover {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-}
-/* Keep all panels aligned and limit inner content overflow */
-.hero-grid .panel {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  height: auto;
-  max-height: 700px; /* prevent giant images from pushing layout */
-}
-
-/* specifically control large images inside panels */
-.hero-grid .panel img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
-/* === SONG ART FIX === */
-#comingList li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(63,169,255,0.1);
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-
-#comingList li:hover {
-  background: rgba(63,169,255,0.15);
-  border-color: rgba(63,169,255,0.3);
-  box-shadow: 0 0 15px rgba(63,169,255,0.25), inset 0 0 6px rgba(63,169,255,0.15);
-}
-
-/* Thumbnail artwork (small square next to song) */
-#comingList img.song-art {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 1px solid rgba(63,169,255,0.25);
-  box-shadow: 0 0 10px rgba(63,169,255,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#comingList img.song-art:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(63,169,255,0.4);
-}
-
-#comingList span {
-  flex: 1;
-  font-size: 0.95rem;
-  color: #eaeaea;
-  line-height: 1.4;
 }
