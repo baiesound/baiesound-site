@@ -233,10 +233,11 @@ body.bg-aura {
   backdrop-filter: blur(12px);
 }
 
+/* Brand section (dot + logo) */
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .brand .dot {
@@ -245,14 +246,29 @@ body.bg-aura {
   border-radius: 50%;
   background: #3fa9ff;
   box-shadow: 0 0 10px #3fa9ff;
+  animation: pulseDot 2.5s ease-in-out infinite;
 }
 
-.header h1 {
-  font-size: 1.4rem;
-  margin: 0;
-  letter-spacing: 0.3px;
+.brand img.logo {
+  height: 42px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(63,169,255,0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.brand img.logo:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 10px rgba(63,169,255,0.6));
+}
+
+/* Dot animation */
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 8px #3fa9ff; opacity: 1; }
+  50% { box-shadow: 0 0 16px #3fa9ff; opacity: 0.7; }
+}
+
+/* Nav links */
 .nav a {
   color: #ddd;
   text-decoration: none;
@@ -264,6 +280,13 @@ body.bg-aura {
 .nav a.active {
   color: #3fa9ff;
 }
+
+@media (max-width: 768px) {
+  .brand img.logo {
+    height: 34px;
+  }
+}
+
 
 /* === PANEL STRUCTURE === */
 .panel {
