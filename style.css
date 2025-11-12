@@ -13,11 +13,11 @@ body.bg-aura {
     linear-gradient(180deg, rgba(0,0,0,0.92), rgba(10,10,15,0.96)),
     url("assets/bg-main2.png") center center / cover no-repeat fixed;
   background-color: #000;
-
   display: flex;
   justify-content: center;
   min-height: 100vh;
 }
+
  
 .container {
   width: 100%;
