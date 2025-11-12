@@ -67,6 +67,22 @@ body.bg-aura {
 .header:hover::before,
 .footer:hover::before { opacity: .55; }
 
+/* === LAYOUT GRID FIX === */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Hero | Out Now | Coming Soon */
+  gap: 28px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
+
 /* === STICKY HEADER === */
 .header {
   position: sticky;
