@@ -63,6 +63,11 @@ body.bg-aura {
   backdrop-filter: blur(16px);
 }
 
+.muted strong {
+  color: #3fa9ff;
+  font-weight: 600;
+}
+
 /* Ensure cards align evenly with the hero panels */
 .cards {
   display: grid;
