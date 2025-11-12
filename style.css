@@ -490,7 +490,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   margin-top: 25px;
 }
 
@@ -498,28 +498,29 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: none;
   padding: 0;
+  background: none;
+  border: none;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.stream-buttons a:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 6px rgba(63,169,255,0.35));
-}
-
 .stream-buttons img {
-  height: 42px;     /* uniform height across all badges */
+  height: 40px;
   width: auto;
   object-fit: contain;
   border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-/* Responsive tweak for mobile */
+.stream-buttons a:hover img {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 8px rgba(63,169,255,0.4));
+}
+
+/* mobile scale */
 @media (max-width: 600px) {
   .stream-buttons img {
-    height: 36px;
+    height: 34px;
   }
 }
 
