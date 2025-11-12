@@ -191,11 +191,11 @@ h2, h3 {
 
 /* === BRAND BUTTON VARIANTS === */
 .btn[href*="spotify.com"] {
-  background: linear-gradient(135deg, #1db954, #169c44);
+  background: linear-gradient(135deg, #333, #111);
 }
 
 .btn[href*="spotify.com"]:hover {
-  background: linear-gradient(135deg, #1ed760, #19b94f);
+  background: linear-gradient(135deg, #555, #222);
 }
 
 .btn[href*="apple.com"] {
@@ -207,11 +207,11 @@ h2, h3 {
 }
 
 .btn[href*="hyperfollow.com"] {
-  background: linear-gradient(135deg, #3fa9ff, #7a5cff);
+  background: linear-gradient(135deg, #333, #111);
 }
 
 .btn[href*="hyperfollow.com"]:hover {
-  background: linear-gradient(135deg, #5cb3ff, #9a7cff);
+  background: linear-gradient(135deg, #555, #222);
 }
 
 /* === FOOTER === */
