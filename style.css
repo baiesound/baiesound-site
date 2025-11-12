@@ -108,6 +108,11 @@ body.bg-aura {
     grid-template-columns: 1fr;
   }
 }
+/* Fix Font Awesome X logo sizing */
+.fab.fa-x-twitter {
+  font-size: 1.1rem;
+  color: #fff;
+}
 
 /* === TEXT & BADGES === */
 h2, h3 {
