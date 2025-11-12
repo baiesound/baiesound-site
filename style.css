@@ -286,3 +286,21 @@ a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+/* Keep all panels aligned and limit inner content overflow */
+.hero-grid .panel {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: auto;
+  max-height: 700px; /* prevent giant images from pushing layout */
+}
+
+/* specifically control large images inside panels */
+.hero-grid .panel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
