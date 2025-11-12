@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact | Baie Sound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baie Sound — Contact</title>
   <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-aura">
   <div class="container">
 
+    <!-- HEADER -->
     <header class="header">
       <div class="brand">
         <span class="dot"></span>
@@ -22,46 +26,59 @@
       </nav>
     </header>
 
-    <section class="hero" style="display:flex; flex-direction:column; gap:22px;">
+    <!-- CONTACT SECTION -->
+    <section class="split">
+      <!-- LEFT PANEL: INFO -->
       <div class="panel" style="padding:32px;">
-        <h2>Contact Baie Sound</h2>
-        <p class="muted" style="margin-top:8px;">
-          Have a project, question, or collaboration idea? Reach out below — let's make something unforgettable.
+        <div class="row"><span class="badge">Contact</span></div>
+        <h2 style="margin:14px 0 10px;">Let’s Connect</h2>
+        <p class="muted" style="margin-bottom:24px;">
+          Got a project, collaboration idea, or just want to say hey?  
+          Reach out — Baie Sound is always open to new sounds, new stories, and real energy.
         </p>
 
-        <form action="https://formspree.io/f/your-form-id" method="POST" style="display:flex; flex-direction:column; gap:16px; margin-top:20px;">
-          <div class="row" style="flex-wrap:wrap; gap:12px;">
-            <input type="text" name="name" placeholder="Your Name" required
-                   style="flex:1; min-width:220px; padding:12px 14px; border-radius:10px; border:1px solid var(--stroke); background:rgba(255,255,255,.04); color:var(--txt);">
-            <input type="email" name="_replyto" placeholder="Your Email" required
-                   style="flex:1; min-width:220px; padding:12px 14px; border-radius:10px; border:1px solid var(--stroke); background:rgba(255,255,255,.04); color:var(--txt);">
-          </div>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li style="margin-bottom:12px;">
+            <i class="fas fa-envelope" style="color:#3fa9ff; margin-right:10px;"></i>
+            <a href="mailto:baiesoundofficial@gmail.com" style="color:#fff; text-decoration:none;">baiesoundofficial@gmail.com</a>
+          </li>
+          <li style="margin-bottom:12px;">
+            <i class="fab fa-instagram" style="color:#ff69b4; margin-right:10px;"></i>
+            <a href="https://www.instagram.com/baiesound" target="_blank" style="color:#fff; text-decoration:none;">@baiesound</a>
+          </li>
+          <li style="margin-bottom:12px;">
+            <i class="fab fa-spotify" style="color:#1DB954; margin-right:10px;"></i>
+            <a href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" target="_blank" style="color:#fff; text-decoration:none;">Spotify Artist Page</a>
+          </li>
+          <li>
+            <i class="fab fa-apple" style="color:#ccc; margin-right:10px;"></i>
+            <a href="https://music.apple.com/us/artist/baie-sound/1849097748" target="_blank" style="color:#fff; text-decoration:none;">Apple Music</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT PANEL: CONTACT FORM -->
+      <div class="panel" style="padding:32px;">
+        <div class="row"><span class="badge">Message</span></div>
+        <h2 style="margin:14px 0 10px;">Send a Message</h2>
+        <form action="https://formspree.io/f/xzbnrzvr" method="POST" style="display:flex; flex-direction:column; gap:14px;">
+          <input type="text" name="name" placeholder="Your Name" required
+                 style="padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(0,0,0,0.4); color:#fff;">
+          <input type="email" name="email" placeholder="Your Email" required
+                 style="padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(0,0,0,0.4); color:#fff;">
           <textarea name="message" placeholder="Your Message" rows="5" required
-                    style="width:100%; padding:14px; border-radius:10px; border:1px solid var(--stroke); background:rgba(255,255,255,.04); color:var(--txt); resize:none;"></textarea>
-          <button type="submit" class="btn" style="align-self:flex-start;">Send Message</button>
+                    style="padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(0,0,0,0.4); color:#fff; resize:none;"></textarea>
+          <button type="submit" class="btn" style="margin-top:6px;">Send Message</button>
         </form>
       </div>
     </section>
 
-    <footer class="footer">© <span id="year"></span> Baie Sound — Digital Pulse. Real Soul.</footer>
+    <footer class="footer">© <span id="y"></span> Baie Sound. Built for speed & vibe.</footer>
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // internal page fade
-    document.querySelectorAll('a[href]').forEach(link => {
-      if (link.hostname === location.hostname && !link.target && !link.hasAttribute('download')) {
-        link.addEventListener('click', e => {
-          if (link.href === location.href) return;
-          e.preventDefault();
-          const flash = Object.assign(document.createElement('div'), { className: 'aura-flash' });
-          document.body.appendChild(flash);
-          document.body.style.opacity = '0';
-          setTimeout(() => location = link.href, 450);
-        });
-      }
-    });
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 </body>
 </html>
