@@ -6,8 +6,8 @@ body.bg-aura {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
   color: #fff;
-  background: url("assets/bg-main2.png") center center / cover no-repeat fixed;
-  background-color: #000;
+  background: url("assets/bg-main2.png") center center / contain no-repeat fixed;
+background-color: #000; /* still adds black padding if image doesn’t fill screen */
   display: flex;
   justify-content: center;
   min-height: 100vh;
