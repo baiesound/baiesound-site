@@ -72,13 +72,13 @@
 
   <div class="panel card">
     <h3>Coming Soon</h3>
-    <ul style="list-style:none; padding:0; margin:12px 0 0;">
-  <li class="muted">“Always There” — out this Friday, Nov. 14, 2025</li>
-  <li class="muted">“Stuck in Pcola” — out this Friday, Nov. 14, 2025</li>
-  <li class="muted">“Forget Work (Remix)” — out this Friday, Nov. 14, 2025</li>
-  <li class="muted">“Up on One” — out this Friday, Nov. 14, 2025</li>
-  <li class="muted">“Snow in Florida” — out this Friday, Nov. 14, 2025</li>
-  <li class="muted">“Still Them Youngins” — out this Friday, Nov. 14, 2025</li>
+   <ul id="comingList" style="list-style:none; padding:0; margin:12px 0 0;">
+  <li class="muted">“Always There” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+  <li class="muted">“Stuck in Pcola” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+  <li class="muted">“Forget Work (Remix)” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+  <li class="muted">“Up on One” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+  <li class="muted">“Snow in Florida” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+  <li class="muted">“Still Them Youngins” — out this Friday, <strong>Nov. 14, 2025</strong></li>
 </ul>
   </div>
 </section>
@@ -88,5 +88,22 @@
   </div>
 
   <script src="site.js"></script>
+<script>
+  // Date when your songs release (year, monthIndex, day)
+  const releaseDate = new Date(2025, 10, 14); // November = 10 (0-based)
+  const today = new Date();
+
+  if (today >= releaseDate) {
+    const comingList = document.getElementById('comingList');
+    comingList.innerHTML = `
+      <li class="muted">“Always There” — now out everywhere</li>
+      <li class="muted">“Stuck in Pcola” — now out everywhere</li>
+      <li class="muted">“Forget Work (Remix)” — now out everywhere</li>
+      <li class="muted">“Up on One” — now out everywhere</li>
+      <li class="muted">“Snow in Florida” — now out everywhere</li>
+      <li class="muted">“Still Them Youngins” — now out everywhere</li>
+    `;
+  }
+</script>
 </body>
 </html>
