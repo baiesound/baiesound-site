@@ -71,6 +71,35 @@ body.bg-aura {
   display:flex;justify-content:space-between;align-items:center;
   padding:22px 32px;margin-bottom:40px;
 }
+.header .brand {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero .panel {
+  margin-top: 0;
+}
+.brand h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3fa9ff;
+  text-shadow: 0 0 8px rgba(63,169,255,0.5);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.container {
+  padding-top: 40px;
+}
 
 /* === FOOTER === */
 .footer {
