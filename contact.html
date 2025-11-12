@@ -1,65 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact | Baie Sound</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-aura">
+  <div class="container">
 
-<body>
-  <div class="bg-aura"></div>
+    <header class="header">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>Baie Sound</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="studio.html">Studio</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
 
-  <header>
-    <div class="logo">BAIE SOUND</div>
-    <div class="hamburger">☰</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="studio.html">Studio</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+    <section class="hero" style="display:flex; flex-direction:column; gap:22px;">
+      <div class="panel" style="padding:32px;">
+        <h2>Contact Baie Sound</h2>
+        <p class="muted" style="margin-top:8px;">
+          Have a project, question, or collaboration idea? Reach out below — let's make something unforgettable.
+        </p>
 
-  <section class="hero">
-    <h1>Contact Baie Sound</h1>
-    <p>Have a project, question, or collaboration idea? Reach out below — let's make something unforgettable.</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" style="display:flex; flex-direction:column; gap:16px; margin-top:20px;">
+          <div class="row" style="flex-wrap:wrap; gap:12px;">
+            <input type="text" name="name" placeholder="Your Name" required
+                   style="flex:1; min-width:220px; padding:12px 14px; border-radius:10px; border:1px solid var(--stroke); background:rgba(255,255,255,.04); color:var(--txt);">
+            <input type="email" name="_replyto" placeholder="Your Email" required
+                   style="flex:1; min-width:220px; padding:12px 14px; border-radius:10px; border:1px solid var(--stroke); background:rgba(255,255,255,.04); color:var(--txt);">
+          </div>
+          <textarea name="message" placeholder="Your Message" rows="5" required
+                    style="width:100%; padding:14px; border-radius:10px; border:1px solid var(--stroke); background:rgba(255,255,255,.04); color:var(--txt); resize:none;"></textarea>
+          <button type="submit" class="btn" style="align-self:flex-start;">Send Message</button>
+        </form>
+      </div>
+    </section>
 
-    <form action="https://formspree.io/f/meovqvvg" method="POST" class="panel">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    © <span id="year"></span> Baie Sound — Digital Pulse. Real Soul.
-  </footer>
+    <footer class="footer">© <span id="year"></span> Baie Sound — Digital Pulse. Real Soul.</footer>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('nav').classList.toggle('active');
-    });
 
-    // Aura + fade
+    // internal page fade
     document.querySelectorAll('a[href]').forEach(link => {
-      if (link.hostname === window.location.hostname) {
+      if (link.hostname === location.hostname && !link.target && !link.hasAttribute('download')) {
         link.addEventListener('click', e => {
-          if (link.href !== window.location.href && !link.target && !link.hasAttribute('download')) {
-            e.preventDefault();
-            const flash = document.createElement('div');
-            flash.className = 'aura-flash';
-            document.body.appendChild(flash);
-            document.body.style.opacity = '0';
-            setTimeout(() => (window.location = link.href), 450);
-          }
+          if (link.href === location.href) return;
+          e.preventDefault();
+          const flash = Object.assign(document.createElement('div'), { className: 'aura-flash' });
+          document.body.appendChild(flash);
+          document.body.style.opacity = '0';
+          setTimeout(() => location = link.href, 450);
         });
       }
-    });
-
-    window.addEventListener("load", () => {
-      document.body.classList.add("loaded");
     });
   </script>
 </body>
