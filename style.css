@@ -80,6 +80,9 @@ body.bg-aura {
   transform: translateY(-2px);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.55);
 }
+.player {
+  margin-top: 20px;
+}
 
 /* === GRID LAYOUT === */
 .split {
