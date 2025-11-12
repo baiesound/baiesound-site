@@ -319,3 +319,40 @@ a:hover{color:#7a5cff;text-shadow:0 0 10px rgba(63,169,255,0.8);}
   .nav { flex-wrap: wrap; justify-content: center; gap: 12px; }
   .brand h1 { font-size: 1.1rem; }
 }
+/* === HERO GRID LAYOUT === */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+  align-items: start;
+}
+
+.panel.full {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .hero-grid { align-items: stretch; }
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .panel.full { grid-column: auto; }
+}
+
+/* === FADE-IN ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in.delay-1 { transition-delay: 0.2s; }
+.fade-in.delay-2 { transition-delay: 0.4s; }
+
