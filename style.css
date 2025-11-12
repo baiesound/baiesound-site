@@ -250,16 +250,18 @@ body.bg-aura {
 }
 
 .brand img.logo {
-  height: 42px;
+  height: 48px;            /* larger for clarity */
   width: auto;
   display: block;
-  filter: drop-shadow(0 0 6px rgba(63,169,255,0.4));
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(63,169,255,0.3));
+  margin-top: 2px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .brand img.logo:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 0 10px rgba(63,169,255,0.6));
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(63,169,255,0.5));
 }
 
 /* Dot animation */
