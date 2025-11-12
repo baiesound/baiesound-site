@@ -67,6 +67,14 @@ body.bg-aura {
   color: #3fa9ff;
   font-weight: 600;
 }
+#comingList li {
+  transition: color 0.4s ease;
+}
+
+#comingList li:contains("now out everywhere") {
+  color: #3fa9ff;
+  font-weight: 600;
+}
 
 /* Ensure cards align evenly with the hero panels */
 .cards {
