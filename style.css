@@ -113,6 +113,34 @@ body.bg-aura {
   font-size: 1.1rem;
   color: #fff;
 }
+/* ==== FOLLOW PANEL CUSTOM AURA ==== */
+.follow-panel {
+  position: relative;
+  background: rgba(25, 25, 30, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.follow-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(63,169,255,0.8), rgba(122,92,255,0.8));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.follow-panel:hover::before {
+  background: linear-gradient(135deg, rgba(63,169,255,1), rgba(181,74,255,0.9));
+  filter: blur(1px);
+  transition: background 0.4s ease;
+}
 
 /* === TEXT & BADGES === */
 h2, h3 {
