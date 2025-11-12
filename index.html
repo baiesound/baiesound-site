@@ -13,112 +13,91 @@
 <body class="bg-aura">
   <div class="container">
 
-<header class="header">
-  <div class="brand">
-    <span class="dot"></span>
-    <h1 class="brand-title">Baie Sound</h1>
+    <!-- === HEADER === -->
+    <header class="header">
+      <div class="brand">
+        <div class="dot"></div>
+        <h1>Baie Sound</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-btn active">Home</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </nav>
+    </header>
+
+    <!-- === MAIN GRID === -->
+    <section class="hero-grid">
+
+      <!-- LEFT PANEL: HERO -->
+      <div class="hero panel fade-in">
+        <p class="intro">BAIE SOUND · INDEPENDENT ARTIST COLLECTIVE</p>
+        <h1 class="headline">
+          Real Sound.<br>Raw Stories.<br>Coastal Grit.
+        </h1>
+        <p class="description">
+          Baie Sound blends southern stories, late-night vibes, and Gulf Coast energy.  
+          New drops hit every week — stream below on your favorite platform.
+        </p>
+
+        <div class="stream-buttons">
+          <a href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" target="_blank">
+            <img src="assets/Spotify_Full_Logo_RGB_Green.png" alt="Spotify">
+          </a>
+          <a href="https://music.apple.com/us/artist/baie-sound/1849097748" target="_blank">
+            <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/listen-on-apple-music/badge/en-us" alt="Apple Music">
+          </a>
+          <a href="https://music.youtube.com/channel/UCtaCFk0ngwfIDA_KH7vomjQ" target="_blank">
+            <img src="assets/yt_logo_fullcolor_white_digital.png" alt="YouTube Music">
+          </a>
+          <a href="https://music.amazon.com/artists/B0FY38DWLL/baie-sound" target="_blank">
+            <img src="assets/amazonmusiclogo.svg" alt="Amazon Music">
+          </a>
+        </div>
+      </div>
+
+      <!-- CENTER PANEL: OUT NOW -->
+      <div class="panel fade-in delay-1">
+        <h3>Out Now</h3>
+        <iframe style="border-radius:12px" 
+          src="https://open.spotify.com/embed/artist/6eIOPPkir1qsVhAPHO6S98?utm_source=generator"
+          width="100%" height="380" frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+
+      <!-- RIGHT PANEL: COMING SOON -->
+      <div class="panel fade-in delay-2">
+        <h3>Coming Soon</h3>
+        <ul id="comingList">
+          <li><img class="song-art" src="assets/alwaysthere.png" alt=""><span>“Always There” — out this Friday, <strong>Nov. 14, 2025</strong></span></li>
+          <li><img class="song-art" src="assets/stuckinpcola.png" alt=""><span>“Stuck in Pcola” — out this Friday, <strong>Nov. 14, 2025</strong></span></li>
+          <li><img class="song-art" src="assets/forgetworkremix.png" alt=""><span>“Forget Work (Remix)” — out this Friday, <strong>Nov. 14, 2025</strong></span></li>
+          <li><img class="song-art" src="assets/uponone.png" alt=""><span>“Up on One” — out this Friday, <strong>Nov. 14, 2025</strong></span></li>
+          <li><img class="song-art" src="assets/snowinflorida.png" alt=""><span>“Snow in Florida” — out this Friday, <strong>Nov. 14, 2025</strong></span></li>
+          <li><img class="song-art" src="assets/stillthemyoungins.png" alt=""><span>“Still Them Youngins” — out this Friday, <strong>Nov. 14, 2025</strong></span></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+      © <span id="y"></span> Baie Sound. All rights reserved.
+    </footer>
   </div>
-  <nav class="nav">
-    <a href="index.html" class="nav-btn active">Home</a>
-    <a href="contact.html" class="nav-btn">Contact</a>
-  </nav>
-</header>
 
-<!-- === MAIN PANELS === -->
-<section class="hero-grid">
-  <!-- LEFT PANEL -->
-<div class="hero panel">
-  <p class="intro">Baie Sound · Independent Artist Collective</p>
-  <h1 class="headline">Real Sound.<br>Raw Stories.<br>Coastal Grit.</h1>
-  <p class="description">
-    Baie Sound blends southern stories, late-night vibes, and Gulf Coast energy.  
-    New drops hit every week — stream below on your favorite platform.
-  </p>
+  <!-- === YEAR + FADE JS === -->
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-  <div class="stream-buttons">
-    <a href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" class="stream-btn" target="_blank">
-      <img src="assets/Spotify_Full_Logo_RGB_Green.png" alt="Spotify">
-    </a>
-    <a href="https://music.apple.com/us/artist/baie-sound/1849097748" class="stream-btn" target="_blank">
-      <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/listen-on-apple-music/badge/en-us" alt="Apple Music">
-    </a>
-    <a href="https://music.youtube.com/channel/UCtaCFk0ngwfIDA_KH7vomjQ" class="stream-btn" target="_blank">
-      <img src="assets/yt_logo_fullcolor_white_digital.png" alt="YouTube Music">
-    </a>
-    <a href="https://music.amazon.com/artists/B0FY38DWLL/baie-sound" class="stream-btn" target="_blank">
-      <img src="assets/amazonmusiclogo.svg" alt="Amazon Music">
-    </a>
-  </div>
-</div>
-
-
-
-  </div>
-
-  <!-- RIGHT PANEL -->
-  <div class="panel now fade-in delay-1">
-    <h3>Out Now</h3>
-    <iframe 
-      src="https://open.spotify.com/embed/artist/6eIOPPkir1qsVhAPHO6S98?utm_source=generator&theme=0"
-      width="100%" height="380" frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy" style="border-radius:12px;margin-top:10px;">
-    </iframe>
-  </div>
-
-  <!-- FULL-WIDTH PANEL -->
-  <div class="panel full fade-in delay-2">
-    <h3>Coming Soon</h3>
-    <ul id="comingList" style="list-style:none;padding:0;margin:12px 0 0;">
-      <li class="muted"><img src="assets/alwaysthere.png" alt="Always There" class="song-art">“Always There” — out this Friday, <strong>Nov. 14, 2025</strong></li>
-      <li class="muted"><img src="assets/stuckinpcola.png" alt="Stuck in Pcola" class="song-art">“Stuck in Pcola” — out this Friday, <strong>Nov. 14, 2025</strong></li>
-      <li class="muted"><img src="assets/forgetworkremix.png" alt="Forget Work Remix" class="song-art">“Forget Work (Remix)” — out this Friday, <strong>Nov. 14, 2025</strong></li>
-      <li class="muted"><img src="assets/uponone.png" alt="Up on One" class="song-art">“Up on One” — out this Friday, <strong>Nov. 14, 2025</strong></li>
-      <li class="muted"><img src="assets/snowinflorida.png" alt="Snow in Florida" class="song-art">“Snow in Florida” — out this Friday, <strong>Nov. 14, 2025</strong></li>
-      <li class="muted"><img src="assets/stillthemyoungins.png" alt="Still Them Youngins" class="song-art">“Still Them Youngins” — out this Friday, <strong>Nov. 14, 2025</strong></li>
-    </ul>
-  </div>
-</section>
-
-<footer class="footer">© <span id="y"></span> Baie Sound. All rights reserved.</footer>
-</div>
-
-<script src="site.js"></script>
-
-<script>
-// === Auto Date Update ===
-document.getElementById('y').textContent = new Date().getFullYear();
-
-// === Coming Soon Logic ===
-const releaseDate = new Date(2025, 10, 14);
-const today = new Date();
-if (today >= releaseDate) {
-  const comingList = document.getElementById('comingList');
-  comingList.innerHTML = `
-    <li class="muted">“Always There” — now out everywhere</li>
-    <li class="muted">“Stuck in Pcola” — now out everywhere</li>
-    <li class="muted">“Forget Work (Remix)” — now out everywhere</li>
-    <li class="muted">“Up on One” — now out everywhere</li>
-    <li class="muted">“Snow in Florida” — now out everywhere</li>
-    <li class="muted">“Still Them Youngins” — now out everywhere</li>
-  `;
-}
-
-// === Sticky Header Scroll Effect ===
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
-});
-
-// === Fade-In Animation on Scroll ===
-const fadeEls = document.querySelectorAll('.fade-in');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('visible');
-  });
-}, { threshold: 0.2 });
-fadeEls.forEach(el => obs.observe(el));
-</script>
+    const fades = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    fades.forEach(f => observer.observe(f));
+  </script>
 </body>
 </html>
