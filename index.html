@@ -16,112 +16,99 @@
 <header class="header">
   <div class="brand">
     <span class="dot"></span>
-    <img src="assets/baie-logo.png" alt="Baie Sound Logo" class="logo">
+    <h1 class="brand-title">Baie Sound</h1>
   </div>
-
   <nav class="nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" class="nav-btn active">Home</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
   </nav>
 </header>
 
-    <section class="hero">
+<!-- === MAIN PANELS === -->
+<section class="hero-grid">
   <!-- LEFT PANEL -->
-  <div class="panel" style="padding:28px;">
+  <div class="panel intro fade-in">
     <div class="row">
       <span class="badge">Baie Sound</span>
       <span class="badge dim">Independent Artist Collective</span>
     </div>
-
-    <h2 style="margin:14px 0 10px">Real Sound. Raw Stories. Coastal Grit.</h2>
+    <h2>Real Sound. Raw Stories. Coastal Grit.</h2>
     <p class="muted">
       Baie Sound is an independent project blending southern stories, late-night vibes, and Gulf Coast energy.  
       New drops hit every week — stream below or on your favorite music platform.
     </p>
+    <div class="stream-buttons">
+      <a class="btn platform spotify" href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+      <a class="btn platform apple" href="https://music.apple.com/us/artist/baie-sound/1849097748" target="_blank"><i class="fab fa-apple"></i> Apple Music</a>
+      <a class="btn platform youtube" href="https://music.youtube.com/channel/UCtaCFk0ngwfIDA_KH7vomjQ" target="_blank"><i class="fab fa-youtube"></i> YouTube Music</a>
+      <a class="btn platform amazon" href="https://music.amazon.com/artists/B0FY38DWLL/baie-sound" target="_blank"><i class="fab fa-amazon"></i> Amazon Music</a>
+    </div>
+  </div>
 
-<div class="stream-buttons">
-  <a class="btn platform spotify" href="https://open.spotify.com/artist/6eIOPPkir1qsVhAPHO6S98" target="_blank">
-    <i class="fab fa-spotify"></i> Spotify
-  </a>
-  <a class="btn platform apple" href="https://music.apple.com/us/artist/baie-sound/1849097748" target="_blank">
-    <i class="fab fa-apple"></i> Apple Music
-  </a>
-  <a class="btn platform youtube" href="https://music.youtube.com/channel/UCtaCFk0ngwfIDA_KH7vomjQ" target="_blank">
-    <i class="fab fa-youtube"></i> YouTube Music
-  </a>
-  <a class="btn platform amazon" href="https://music.amazon.com/artists/B0FY38DWLL/baie-sound?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_erNXNqBV3kWYSUQV1hD65cpPo" target="_blank">
-    <i class="fab fa-amazon"></i> Amazon Music
-  </a>
-</div>
-  </section>
-
-   <section id="music" class="cards">
-  <div class="panel card">
+  <!-- RIGHT PANEL -->
+  <div class="panel now fade-in delay-1">
     <h3>Out Now</h3>
     <iframe 
-      style="border-radius:12px; margin-top:10px;"
       src="https://open.spotify.com/embed/artist/6eIOPPkir1qsVhAPHO6S98?utm_source=generator&theme=0"
-      width="100%" 
-      height="380" 
-      frameborder="0" 
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy">
+      width="100%" height="380" frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy" style="border-radius:12px;margin-top:10px;">
     </iframe>
   </div>
 
-  <div class="panel card">
+  <!-- FULL-WIDTH PANEL -->
+  <div class="panel full fade-in delay-2">
     <h3>Coming Soon</h3>
-   <ul id="comingList" style="list-style:none; padding:0; margin:12px 0 0;">
-  <li class="muted">
-    <img src="assets/alwaysthere.png" alt="Always There" class="song-art">
-    “Always There” — out this Friday, <strong>Nov. 14, 2025</strong>
-  </li>
-  <li class="muted">
-    <img src="assets/stuckinpcola.png" alt="Stuck in Pcola" class="song-art">
-    “Stuck in Pcola” — out this Friday, <strong>Nov. 14, 2025</strong>
-  </li>
-  <li class="muted">
-    <img src="assets/forgetworkremix.png" alt="Forget Work Remix" class="song-art">
-    “Forget Work (Remix)” — out this Friday, <strong>Nov. 14, 2025</strong>
-  </li>
-  <li class="muted">
-    <img src="assets/uponone.png" alt="Up on One" class="song-art">
-    “Up on One” — out this Friday, <strong>Nov. 14, 2025</strong>
-  </li>
-  <li class="muted">
-    <img src="assets/snowinflorida.png" alt="Snow in Florida" class="song-art">
-    “Snow in Florida” — out this Friday, <strong>Nov. 14, 2025</strong>
-  </li>
-  <li class="muted">
-    <img src="assets/stillthemyoungins.png" alt="Still Them Youngins" class="song-art">
-    “Still Them Youngins” — out this Friday, <strong>Nov. 14, 2025</strong>
-  </li>
-</ul>
-
+    <ul id="comingList" style="list-style:none;padding:0;margin:12px 0 0;">
+      <li class="muted"><img src="assets/alwaysthere.png" alt="Always There" class="song-art">“Always There” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+      <li class="muted"><img src="assets/stuckinpcola.png" alt="Stuck in Pcola" class="song-art">“Stuck in Pcola” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+      <li class="muted"><img src="assets/forgetworkremix.png" alt="Forget Work Remix" class="song-art">“Forget Work (Remix)” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+      <li class="muted"><img src="assets/uponone.png" alt="Up on One" class="song-art">“Up on One” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+      <li class="muted"><img src="assets/snowinflorida.png" alt="Snow in Florida" class="song-art">“Snow in Florida” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+      <li class="muted"><img src="assets/stillthemyoungins.png" alt="Still Them Youngins" class="song-art">“Still Them Youngins” — out this Friday, <strong>Nov. 14, 2025</strong></li>
+    </ul>
   </div>
 </section>
 
+<footer class="footer">© <span id="y"></span> Baie Sound. All rights reserved.</footer>
+</div>
 
-    <footer class="footer">© <span id="y"></span> Baie Sound. All rights reserved.</footer>
-  </div>
+<script src="site.js"></script>
 
-  <script src="site.js"></script>
 <script>
-  // Date when your songs release (year, monthIndex, day)
-  const releaseDate = new Date(2025, 10, 14); // November = 10 (0-based)
-  const today = new Date();
+// === Auto Date Update ===
+document.getElementById('y').textContent = new Date().getFullYear();
 
-  if (today >= releaseDate) {
-    const comingList = document.getElementById('comingList');
-    comingList.innerHTML = `
-      <li class="muted">“Always There” — now out everywhere</li>
-      <li class="muted">“Stuck in Pcola” — now out everywhere</li>
-      <li class="muted">“Forget Work (Remix)” — now out everywhere</li>
-      <li class="muted">“Up on One” — now out everywhere</li>
-      <li class="muted">“Snow in Florida” — now out everywhere</li>
-      <li class="muted">“Still Them Youngins” — now out everywhere</li>
-    `;
-  }
+// === Coming Soon Logic ===
+const releaseDate = new Date(2025, 10, 14);
+const today = new Date();
+if (today >= releaseDate) {
+  const comingList = document.getElementById('comingList');
+  comingList.innerHTML = `
+    <li class="muted">“Always There” — now out everywhere</li>
+    <li class="muted">“Stuck in Pcola” — now out everywhere</li>
+    <li class="muted">“Forget Work (Remix)” — now out everywhere</li>
+    <li class="muted">“Up on One” — now out everywhere</li>
+    <li class="muted">“Snow in Florida” — now out everywhere</li>
+    <li class="muted">“Still Them Youngins” — now out everywhere</li>
+  `;
+}
+
+// === Sticky Header Scroll Effect ===
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+// === Fade-In Animation on Scroll ===
+const fadeEls = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.2 });
+fadeEls.forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
